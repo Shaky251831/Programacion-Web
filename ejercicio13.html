@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Votación | DevSolutions</title>
+    <link rel="stylesheet" href="css/ejercicio10.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor-formulario">
+        <h1>Calculadora de Votación</h1>
+        <p class="subtitulo">Determina si una persona puede votar en función de su edad.</p>
+
+        <form class="formulario" id="formVotacion">
+            <div class="grupo-formulario">
+                <label for="edad">Edad</label>
+                <input type="text" id="edad" placeholder="Ej: 20" required>
+                <span class="error" id="errorEdad"></span>
+            </div>
+
+            <button type="button" id="btnVerificar" class="boton-enviar">
+                Verificar edad <span>&rarr;</span>
+            </button>
+
+            <div class="grupo-formulario">
+                <label for="resultado">Resultado de validación</label>
+                <input type="text" id="resultado" readonly placeholder="El resultado aparecerá aquí...">
+            </div>
+        </form>
+    </div>
+
+    <script src="js/ejercicio13.js"></script>
+</body>
+</html>

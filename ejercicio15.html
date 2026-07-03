@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Estudiantes | DevSolutions</title>
+    <link rel="stylesheet" href="css/ejercicio10.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor-formulario">
+        <h1>Calificaciones de Estudiantes</h1>
+        <p class="subtitulo">Registra alumnos con sus calificaciones y calcula estadísticas.</p>
+
+        <form class="formulario" id="formEstudiantes">
+            <div class="grupo-formulario">
+                <label for="nombre">Nombre del Estudiante</label>
+                <input type="text" id="nombre" placeholder="Ej: Bris Marquez" required>
+                <span class="error" id="errorNombre"></span>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="calificacion">Calificación</label>
+                <input type="text" id="calificacion" placeholder="Ej: 85" required>
+                <span class="error" id="errorCalificacion"></span>
+            </div>
+
+            <div class="grupo-formulario" style="display: flex; gap: 10px;">
+                <button type="button" id="btnAgregar" class="boton-enviar" style="flex: 1;">
+                    Agregar estudiante
+                </button>
+                <button type="button" id="btnCalcular" class="boton-enviar" style="flex: 1; background-color: #7c62ab;">
+                    Calcular <span>&rarr;</span>
+                </button>
+            </div>
+
+            <p id="contadorEstudiantes" style="font-size: 13px; color: #666; margin: -5px 0 15px 0; font-weight: 500;"></p>
+
+            <div class="grupo-formulario">
+                <label for="promedio">Calificación Promedio</label>
+                <input type="text" id="promedio" readonly placeholder="El promedio aparece aquí...">
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="estudianteMayor">Calificación Más Alta</label>
+                <input type="text" id="estudianteMayor" readonly placeholder="El mejor estudiante aparece aquí...">
+            </div> 
+
+            <div class="grupo-formulario"> 
+                <label for="estudianteMenor">Calificación Más Baja</label> 
+                <input type="text" id="estudianteMenor" readonly placeholder="El estudiante con menor nota aparece aquí...">
+            </div> 
+        </form>
+    </div>
+
+    <script src="js/ejercicio15.js"></script>
+</body>
+</html>
