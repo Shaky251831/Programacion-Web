@@ -1,4 +1,21 @@
 ACTIVIDAD: EJERCICIOS HTML, CSS y JS
+EJERCICIO 1: Crear una página HTML básica con el mensaje "¡Hola Mundo!" y alojarla en el servidor local
+XAMPP, aplicando la estructura mínima de HTML5.
+
+<!DOCTYPE html>: Declara la versión de HTML (HTML5).
+<html>: Elemento raíz
+<head>: Metadatos
+<meta charset="UTF-8">: Permite usar caracteres especiales (ñ, á, emojis).
+<title>: Define el título en la pestaña del navegador.
+<body>: Contenido visible
+<h1> y <p>: Encabezados y párrafos (semántica básica).
+
+Ejercicio 2: Párrafos y Formato Básico:
+Objetivo: Usar <p>, <strong>, <em> y saltos de línea
+<p>: Define un párrafo de texto (bloque separado).
+<strong>: Texto importante (negrita semántica).
+<em>: Texto con énfasis (cursiva semántica).
+<br>: Salto de línea (sin margen adicional).
 
 En estos 10 ejercicios prácticos de programación web,
 se basó en ver cuáles son los fundamentos, elementos de HTML, CSS3 y JavaScript, 
