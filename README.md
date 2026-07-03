@@ -1,21 +1,4 @@
 ACTIVIDAD: EJERCICIOS HTML, CSS y JS
-EJERCICIO 1: Crear una página HTML básica con el mensaje "¡Hola Mundo!" y alojarla en el servidor local
-XAMPP, aplicando la estructura mínima de HTML5.
-
-<!DOCTYPE html>: Declara la versión de HTML (HTML5).
-<html>: Elemento raíz
-<head>: Metadatos
-<meta charset="UTF-8">: Permite usar caracteres especiales (ñ, á, emojis).
-<title>: Define el título en la pestaña del navegador.
-<body>: Contenido visible
-<h1> y <p>: Encabezados y párrafos (semántica básica).
-
-Ejercicio 2: Párrafos y Formato Básico:
-Objetivo: Usar <p>, <strong>, <em> y saltos de línea
-<p>: Define un párrafo de texto (bloque separado).
-<strong>: Texto importante (negrita semántica).
-<em>: Texto con énfasis (cursiva semántica).
-<br>: Salto de línea (sin margen adicional).
 
 En estos 10 ejercicios prácticos de programación web,
 se basó en ver cuáles son los fundamentos, elementos de HTML, CSS3 y JavaScript, 
@@ -27,6 +10,5 @@ secciones semánticas (<header>, <section>, <footer>), listas, tablas con <thead
 un formulario de contacto completo con validación HTML y estilizado en CSS externo usando variables.
 
 En el último ejercicio 10  era hacer una calculadora de conversión de temperatura (Celsius a Fahrenheit),
-en el cual se ocupa el concepto del DOM (Document Object Model), JavaScript lee lo que el usuario escribe, asegura que el dato sea correcto, 
-hacer el cálculo y muestra el resultado en pantalla, usando eventos como submit y métodos como preventDefault(), 
+en el cual se ocupa el concepto del DOM (Document Object Model), JavaScript lee lo que el usuario escribe, asegura que el dato sea correcto, hacer el cálculo y muestra el resultado en pantalla, usando eventos como submit y métodos como preventDefault(), 
 este último ejercicio me base usando lo aplicado en los demás ejercicios y buscando los elementos en los enlaces de Classroom.
