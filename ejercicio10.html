@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor | DevSolutions</title>
+    <link rel="stylesheet" href="css/ejercicio10.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor-formulario">
+        <h1>Conversor de Temperatura</h1>
+        <p class="subtitulo">Convierte grados Celsius a Fahrenheit al instante.</p>
+
+        <form class="formulario" id="formConversor">
+        <!-- Celsius -->
+            <div class="grupo-formulario">
+                <label for="celsius">Temperatura en Celsius</label>
+                <input type="text" id="celsius" placeholder="Ej: 25" required>
+                <span class="error" id="errorCelsius"></span>
+            </div>
+
+       <!-- Botón -->
+            <button type="button" id="btnConvertir" class="boton-enviar">
+                Convertir <span>&rarr;</span>
+            </button>
+
+       <!-- Resultado -->
+            <div class="grupo-formulario">
+                <label for="fahrenheit">Resultado en Fahrenheit</label>
+                <input type="text" id="fahrenheit" readonly>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/ejercicio10.js"></script>
+</body>
+</html>
