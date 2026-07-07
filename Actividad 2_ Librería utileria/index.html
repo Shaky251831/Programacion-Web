@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilería - Formulario y Modal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <main class="container">
+        <h2>Formulario de Registro General</h2>
+        <form id="formRegistro">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo (solo letras):</label>
+                <input type="text" id="nombre" required>
+            </div>
+             <div class="form-group">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono (Máx. 10 dígitos):</label>
+                <input type="number" id="telefono" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fechaNac">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNac" required>
+            </div>
+
+            <button type="submit">Validar y Calcular Edad</button>
+        </form>
+    </main>
+
+    <div id="miModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="cerrarModal">&times;</span>
+            <h3>Resultado del Cálculo</h3>
+            <p id="txtResultadoEdad"></p>
+        </div>
+    </div>
+
+    <script src="js/utileria.js"></script>
+    <script>
+        const form = document.getElementById('formRegistro');
+        const modal = document.getElementById('miModal');
+        const cerrarModal = document.getElementById('cerrarModal');
+        const txtResultadoEdad = document.getElementById('txtResultadoEdad');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+
+            let nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+            const telefono = document.getElementById('telefono').value;
+            const fechaNac = document.getElementById('fechaNac').value;
+
+            nombre = limpiarEspacios(nombre);
+            nombre = capitalizarTexto(nombre);
+            document.getElementById('nombre').value = nombre; 
+
+            console.log("========== EVALUANDO FORMULARIO ==========");
+            console.log("Nombre (Procesado):", nombre);
+            console.log("¿Nombre válido? (soloLetras):", soloLetras(nombre));
+            console.log("Correo:", correo);
+            console.log("¿Correo válido? (validarCorreo):", validarCorreo(correo));
+            console.log("Teléfono:", telefono);
+            console.log("¿Longitud teléfono válida? (<=10):", validarLongitud(telefono, 10));
+
+            if (!soloLetras(nombre)) {
+                alert("El nombre solo debe contener letras y espacios.");
+                console.warn("Validación fallida: El nombre contiene caracteres no permitidos.");
+                return;
+            }
+            if (!validarCorreo(correo)) {
+                alert("Por favor, introduce un correo electrónico válido.");
+                console.warn("Validación fallida: Formato de correo electrónico inválido.");
+                return;
+            }
+            if (!validarLongitud(telefono, 10)) {
+                alert("El teléfono no debe exceder los 10 dígitos.");
+                console.warn("Validación fallida: El teléfono excede los 10 dígitos.");
+                return;
+            }
+            const edad = calcularEdad(fechaNac);
+            const mayor = esMayorDeEdad(fechaNac);
+
+            console.log("Fecha de Nacimiento:", fechaNac);
+            console.log("Edad calculada:", edad, "años");
+            console.log("¿Es mayor de edad?:", mayor);
+            console.log("==========================================");
+
+            txtResultadoEdad.innerHTML = `Tienes <strong>${edad}</strong> años. <br> 
+            Estatus: ${mayor ? "Eres mayor de edad. Acceso concedido." : "Eres menor de edad."}`;
+
+            modal.style.display = "block";
+        });
+
+        cerrarModal.onclick = () => modal.style.display = "none";
+        window.onclick = (event) => {
+            if (event.target == modal) modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
