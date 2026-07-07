@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora | DevSolutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <style>
+        /* Estilos base de tu plantilla para mantener la estética */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .contenedor-formulario {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #927bc0;
+            font-size: 28px;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+        .subtitulo {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+        .grupo-formulario {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333333;
+            font-size: 14px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #333;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #a78bfa;
+            box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.2);
+        }
+        input[readonly] {
+            background-color: #f8fafc;
+            color: #4a5568;
+            border: 1px solid #cbd5e1;
+            cursor: not-allowed;
+        }
+        .grid-botones {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .boton-enviar {
+            background-color: #927bc0;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .boton-enviar:hover {
+            background-color: #7c62ab;
+        }
+        .invalido {
+            border-color: #dc2626 !important;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2) !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-formulario">
+        <h1>Calculadora Básica</h1>
+        <p class="subtitulo">Realiza operaciones básicas utilizando funciones flecha.</p>
+
+        <form class="formulario" id="formCalculadora">
+            <div class="grupo-formulario">
+                <label for="numero1">Primer Número</label>
+                <input type="text" id="numero1" placeholder="Ej: 15" required>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="numero2">Segundo Número</label>
+                <input type="text" id="numero2" placeholder="Ej: 5" required>
+            </div>
+
+            <div class="grupo-formulario grid-botones">
+                <button type="button" class="boton-enviar" onclick="calcularOperacion('suma')">Sumar</button>
+                <button type="button" class="boton-enviar" onclick="calcularOperacion('resta')">Restar</button>
+                <button type="button" class="boton-enviar" onclick="calcularOperacion('multiplicacion')">Multiplicar</button>
+                <button type="button" class="boton-enviar" onclick="calcularOperacion('division')">Dividir</button>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="resultado">Resultado</label>
+                <input type="text" id="resultado" readonly placeholder="El resultado aparecerá aquí...">
+            </div>
+        </form>
+    </div>
+
+    <script src="js/ejercicio16.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor | DevSolutions</title>
+    <link rel="stylesheet" href="css/ejercicio10.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor-formulario">
+        <h1>Calculadora de Moneda</h1>
+        <p class="subtitulo">Convierte pesos mexicanos a dólares estadounidenses.</p>
+
+        <form class="formulario" id="formConversor">
+        <!-- Pesos Mexicanos -->
+            <div class="grupo-formulario">
+                <label for="pesos">Monto en Pesos Mexicanos</label>
+                <input type="text" id="pesos" placeholder="Ej: 25" required>
+                <span class="error" id="errorPesos"></span>
+            </div>
+
+       <!-- Botón -->
+            <button type="button" id="btnConvertir" class="boton-enviar">
+                Convertir <span>&rarr;</span>
+            </button>
+
+       <!-- Resultado -->
+            <div class="grupo-formulario">
+                <label for="dolares">Resultado en Dólares</label>
+                <input type="text" id="dolares" readonly>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/ejercicio12.js"></script>
+</body>
+</html>
